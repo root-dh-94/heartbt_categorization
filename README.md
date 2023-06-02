@@ -13,8 +13,8 @@ run 'pip install -r requirements.txt' to install the environment for this projec
 
 # How to run model
 1) Clone repo
-2) Install MITBIH dataset and store the raw data under 'data/raw/'
-3) Added two additional folders under the data directory: 'data/interim/' and 'data/processed/' to store processed datasets that wil be created in the next step
+2) Install MITBIH dataset and store the training and test sets as 'data/raw/heartbt_data/mitbih_test.csv' and 'data/raw/heartbt_data/mitbih_train.csv'
+3) Add two additional folders under the data directory: 'data/interim/' and 'data/processed/' to store processed datasets that will be created in the next step
 4) run 'src/data/make_dataset.py' to process raw data. Make sure raw data is under correct folder
 5) run 'src/models/train_model.py' to start training an validation loop. Note: Logs are recorded through weights and biases and will require a wandb api key/login. This file also has several flags related to hyperparameters, that can be passed along during execution. The default run is 50 epochs with a 0.001 lr
 6) Once training run is complete, ensure checkpoints are saved under 'src/models/ckpts/'
